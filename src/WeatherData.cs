@@ -1,4 +1,5 @@
-namespace Spaceproject.src
+
+namespace SpaceProject.src
 {
     public enum CloudCover
     {   
@@ -29,7 +30,8 @@ namespace Spaceproject.src
             set 
             {
                 if(value < 1 || value > 31)
-                    throw new ArgumentException($"Invalid argument for day: {value}");
+                    throw new ArgumentException("Invalid argument for " + 
+                                                $"day: {value}");
                  _day = value;
             }
         }
@@ -39,7 +41,8 @@ namespace Spaceproject.src
             set 
             { 
                 if(value < -20 || value > 60)
-                    throw new ArgumentException($"Invalid argument for temperature: {value}");
+                    throw new ArgumentException("Invalid argument for " +
+                                                $"temperature: {value}");
                 _temperature = value; 
             }
         }
@@ -49,7 +52,8 @@ namespace Spaceproject.src
             set 
             { 
                 if(value < 0 || value > 40)
-                    throw new ArgumentException($"Invalid argument for wind speed in m/s: {value}");
+                    throw new ArgumentException("Invalid argument for " +
+                                                $"wind speed in m/s: {value}");
                 _wind = value; 
             }
         }
@@ -59,7 +63,8 @@ namespace Spaceproject.src
             set 
             {
                 if(value < 0 || value > 100)
-                    throw new ArgumentException($"Invalid argument for humidity in %: {value}");
+                    throw new ArgumentException("Invalid argument for " + 
+                                                $"humidity in %: {value}");
                 _humidity = value; 
             }
         }
@@ -69,7 +74,8 @@ namespace Spaceproject.src
             set 
             { 
                 if(value < 0 || value > 100)
-                    throw new ArgumentException($"Invalid argument for precipitation in %: {value}");
+                    throw new ArgumentException("Invalid argument for " + 
+                                                $"precipitation in %: {value}");
                 _precipitation = value;
             }
         }

@@ -1,6 +1,5 @@
-using Spaceproject.src;
 
-namespace Spaceproject
+namespace SpaceProject.src
 {
     public enum CityName
     {
