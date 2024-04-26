@@ -13,8 +13,8 @@ namespace Spaceproject
     public class CityWeather
     {
         public CityName Name{ get; set; }
-        public List<WeatherData> WeatherDatas{ get; set; }
-        public CityWeather(CityName cityName,List<WeatherData> weatherDatas)
+        public WeatherData[] WeatherDatas{ get; set; }
+        public CityWeather(CityName cityName,WeatherData[] weatherDatas)
         {
             this.Name = cityName;   
             this.WeatherDatas = weatherDatas;
