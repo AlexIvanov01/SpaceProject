@@ -4,15 +4,18 @@ try
 {
     var list = new List<CityWeather>();
     list = DataReader.LoadDataFromFolder("/home/alex/c#/SpaceProject/input_example/");
+    string reason;
+    var bestList = new List<CityWeather>();
     foreach(var city in list)
     {
         city.PrintData();
-        string reason;
         var bestDay = city.FindBestDayForLaunch(out reason);
-        if (bestDay != null) System.Console.WriteLine("\nBest day for launch:\n" +
-                                  $"{bestDay}\n\nReason:\n{reason}");
-        else System.Console.WriteLine("\nNo best day for launch for this city\n");
+        if (bestDay != null) bestList.Add(city);
     }    
+    var bestCity = CityWeather.FindBestLocation(bestList, out reason);
+    if(bestCity != null)
+    System.Console.WriteLine($"\nBest location for launch is {bestCity.Name}.\nReason: {reason}\n");
+    else System.Console.WriteLine("No suitable location for the given period.");
 }
 catch (Exception ex)
 {
