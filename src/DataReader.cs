@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Globalization;
 
 namespace SpaceProject.src
@@ -11,7 +11,7 @@ namespace SpaceProject.src
 
             CheckCSV(lines, filePath);
 
-            WeatherData[] weatherData = 
+            WeatherData[] weatherData =
             new WeatherData[lines[0].Split(',').Length - 1];
 
             for (int i = 0; i < weatherData.Length; i++)
@@ -31,7 +31,7 @@ namespace SpaceProject.src
                     switch (values[0].ToLower().Replace("\"", ""))
                     {
                         case "day":
-                        isParseFailure = !int.TryParse(values[j], out tempInt);
+                            isParseFailure = !int.TryParse(values[j], out tempInt);
                             if (isParseFailure)
                             {
                                 throw new FormatException(
@@ -156,7 +156,7 @@ namespace SpaceProject.src
             if (lines.Length != 7)
             {
                 throw new FormatException(
-                    $"Invalid file foramt for file {filePath}." +
+                    $"Invalid file foramt for file {filePath}. " +
                     "Required number of valid rows is 7. " +
                     $"Read rows is {lines.Length}");
             }
@@ -164,12 +164,40 @@ namespace SpaceProject.src
             if (lines[0].Split(',').Length > 16)
             {
                 throw new FormatException(
-                    $"Invalid file foramt for file {filePath}." +
+                    $"Invalid file foramt for file {filePath}. " +
                     "Maximum number of columns is 15. " +
                     $"Read number of columns is {lines[0].Split(',').Length}");
             }
+
+            var firstValues = lines.Select(line => line.Split(',')[0]);
+            bool isEachRowUnique = firstValues.Distinct().Count() == lines.Length;
+
+            if (!isEachRowUnique)
+            {
+                throw new FormatException(
+                    $"Invalid file foramt for file {filePath}. " +
+                    "There are duplicate rows present in the file.");
+            }
+
+            // Find the row that starts with "day"
+            string? dayRow = lines.FirstOrDefault(line => line.ToLower()
+                                                              .Replace("\"", "")
+                                                              .StartsWith("day"));
+
+            // Check if the day row exists and if all values in it are unique
+            if (dayRow != null)
+            {
+                string[] values = dayRow.Split(',');
+                bool isDayRowUnique = values.Distinct().Count() == values.Length;
+                if (!isDayRowUnique)
+                {
+                    throw new FormatException(
+                    $"Invalid file foramt for file {filePath}. " +
+                    "There are duplicate days in the day row");
+                }
+            }
         }
-        
+
         public static List<CityWeather> LoadDataFromFolder(string folderPath)
         {
             try

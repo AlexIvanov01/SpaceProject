@@ -79,5 +79,12 @@ namespace SpaceProject.src
                 _precipitation = value;
             }
         }
+
+        public override string ToString()
+        {
+            return $"Day {Day}: Temperature - {Temperature} degrees, Wind - {Wind} m/s, " +
+            $"Humidity - {Humidity}%, Precipitation - {Precipitation}%, " + 
+            $"Lighting - {Lighting}, Clouds - {Clouds}";
+        }
     }
 }
