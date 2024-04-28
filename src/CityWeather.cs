@@ -1,6 +1,8 @@
 using System.Text;
 using System.Net;
 using System.Net.Mail;
+using System.Security;
+using System.Text.RegularExpressions;
 
 namespace SpaceProject.src
 {
@@ -38,14 +40,14 @@ namespace SpaceProject.src
             List<WeatherData> goodDays = new List<WeatherData>();
             foreach (var day in WeatherDatas)
             {
-                if (day.Precipitation != 0 ||
+                if (day.Precipitation > WeatherData.PrecipitationCriteria ||
                     day.Lighting == true ||
-                    day.Humidity >= 55 ||
-                    day.Wind > 11 ||
+                    day.Humidity >= WeatherData.HumidityCriteria ||
+                    day.Wind > WeatherData.WindCriteria ||
                     day.Clouds == CloudCover.Cumulus ||
                     day.Clouds == CloudCover.Nimbus ||
-                    day.Temperature < 1 ||
-                    day.Temperature > 32) continue;
+                    day.Temperature < WeatherData.MinTemperatureCriteria ||
+                    day.Temperature > WeatherData.MaxTemperatureCriteria) continue;
 
                 goodDays.Add(day);
             }
@@ -84,11 +86,8 @@ namespace SpaceProject.src
 
         public static CityWeather? FindBestLocation(List<CityWeather> cities, out string leadCondition)
         {
-            foreach (CityWeather cityWeather in cities)
-            {
-                if (cityWeather.BestDayForLaunch == null)
-                    cities.Remove(cityWeather);
-            }
+            cities.RemoveAll(city => city.BestDayForLaunch == null);
+
             if (cities.Count == 0)
             {
                 leadCondition = string.Empty;
@@ -171,25 +170,60 @@ namespace SpaceProject.src
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
-        public static void SendDataToMail(List<CityWeather> cities, CityWeather bestLocation,
-         string filePath, string senderEmail, string senderPassword, string receiverEmail)
+        public static void SendDataToMail(List<CityWeather> cities,
+                                          CityWeather bestLocation, string filePath)
         {
             if (bestLocation.BestDayForLaunch == null)
                 throw new ArgumentException("[bestLocation.BestDayForLaunch] is null.");
 
-            // Create a new MailMessage
-            MailMessage mail = new MailMessage(senderEmail, receiverEmail);
-            mail.Subject = "Space Shuttle Launch Analysis Report";
-            mail.Body = $"Best location for launch is {bestLocation.Name} " + 
-                        $"on day {bestLocation.BestDayForLaunch.Day}.";
-            mail.IsBodyHtml = false;
+            System.Console.WriteLine("\nPlease provide full outlook sender email, password and " +
+                             "receiver email to send results to mail.\n");
+
+            System.Console.WriteLine("Enter sender email: ");
+            string senderEmail = System.Console.ReadLine() ??
+                throw new ArgumentException("Error. No sender email provided.");
+
+            string pattern = @"@outlook\.com$";
+            Regex regex = new Regex(pattern);
+            bool isMatch = regex.IsMatch(senderEmail);
+            if (!isMatch) throw new ArgumentException("Please provide Outlook email.");
+
+            // Instantiate the secure string.
+            SecureString securePwd = new SecureString();
+            ConsoleKeyInfo key;
+
+            Console.Write("Enter password: ");
+            do
+            {
+                key = Console.ReadKey(true);
+
+                // Append the character to the password.
+                securePwd.AppendChar(key.KeyChar);
+                Console.Write("*");
+
+                // Exit if Enter key is pressed.
+            } while (key.Key != ConsoleKey.Enter);
+
+            securePwd.MakeReadOnly();
 
             // Create SMTP client
             SmtpClient client = new SmtpClient("smtp-mail.outlook.com");
             client.Port = 587;
             client.UseDefaultCredentials = false;
             client.EnableSsl = true;
-            client.Credentials = new NetworkCredential(senderEmail, senderPassword);
+            client.Credentials = new NetworkCredential(senderEmail, securePwd);
+            securePwd.Dispose();
+
+            System.Console.WriteLine("Enter receiver: ");
+            string receiverEmail = System.Console.ReadLine() ??
+                throw new ArgumentException("Error. No receiver email provided.");
+
+            // Create a new MailMessage
+            MailMessage mail = new MailMessage(senderEmail, receiverEmail);
+            mail.Subject = "Space Shuttle Launch Analysis Report";
+            mail.Body = $"Best location for launch is {bestLocation.Name} " +
+                        $"on day {bestLocation.BestDayForLaunch.Day}.";
+            mail.IsBodyHtml = false;
 
             // Attach the CSV file
             Attachment attachment = new Attachment(filePath);
@@ -198,7 +232,7 @@ namespace SpaceProject.src
             // Send the email
             client.Send(mail);
 
-            Console.WriteLine("Email sent successfully.");
+            Console.WriteLine("\nEmail sent successfully.");
         }
     }
 }
