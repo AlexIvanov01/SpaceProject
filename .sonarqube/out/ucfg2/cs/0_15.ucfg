@@ -1,0 +1,54 @@
+
+,SpaceProject.src.WeatherData.Temperature.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs. .("0*
+0. .(*
+1*
+10 0(*
+2
+3*
+20# 0(-*
+3
+4*ò
+31 2(Hb
+`
+20 2(G
+%0string"__concat*
+22 2(?
+temperature: *
+2? 2(F
+
+valuedoubleg
+e
+10 2(G
+%1string"__concat*%
+10 1(G
+Invalid argument for *
+20 2(G
+
+%0stringFD
+1 2(H
+%2System.ArgumentException"System.ArgumentException¬
+©
+1 2(H
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
+1 2(H 
+
+%2System.ArgumentException*
+10 2(G
+
+%1string"
+4 4(
+implicit return*u
+43 3(%a
+_
+3 3($8
+SpaceProject.src.WeatherData"
+_temperaturedouble"__id*
+
+valuedouble*
+5*.
+54 4("
+4 4(
+implicit return:
+valuedoubleB 
+SpaceProject.src.WeatherDataX

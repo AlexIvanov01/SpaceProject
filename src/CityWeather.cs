@@ -29,9 +29,9 @@ namespace SpaceProject.src
         public void PrintData()
         {
             var table = new ConsoleTable("Day", "Temperature [°C]", "Wind [m/s]",
-                         "Humidity [%]","Precipitation [%]","Lighting", "Clouds");
+                         "Humidity [%]", "Precipitation [%]", "Lighting", "Clouds");
 
-            foreach(var day in WeatherDatas)
+            foreach (var day in WeatherDatas)
             {
                 table.AddRow(day.Day, day.Temperature, day.Wind, day.Humidity,
                  day.Precipitation, day.Lighting, day.Clouds);
@@ -47,7 +47,7 @@ namespace SpaceProject.src
             foreach (var day in WeatherDatas)
             {
                 if (day.Precipitation > WeatherData.PrecipitationCriteria ||
-                    day.Lighting == true ||
+                    day.Lighting ||
                     day.Humidity >= WeatherData.HumidityCriteria ||
                     day.Wind > WeatherData.WindCriteria ||
                     day.Clouds == CloudCover.Cumulus ||
@@ -66,8 +66,8 @@ namespace SpaceProject.src
             if (goodDays.Count == 1)
             {
                 leadCondition = "Only day that fits conditions.";
-                BestDayForLaunch = goodDays.First();
-                return goodDays.First();
+                BestDayForLaunch = goodDays[0];
+                return goodDays[0];
             }
 
             var OrderedByWindArray =
@@ -81,8 +81,10 @@ namespace SpaceProject.src
                 return OrderedByWindArray[0];
             }
 
+            // Takes every day that has the same wind speed as the first day,
+            // and orders them by humidity. Returns the first day from the new array.
             var FirstByHumidityDay = OrderedByWindArray.Where(
-                day => day.Wind == OrderedByWindArray.First().Wind).OrderBy(
+                day => day.Wind == OrderedByWindArray[0].Wind).OrderBy(
                     day => day.Humidity).First();
 
             leadCondition = "Day with the lowest wind speed and humidity.";
@@ -93,7 +95,7 @@ namespace SpaceProject.src
         public static CityWeather? FindBestLocation(List<CityWeather> cities, out string leadCondition)
         {
             cities.RemoveAll(city => city.BestDayForLaunch == null);
-
+            // Check for null reference
             if (cities.Count == 0)
             {
                 leadCondition = string.Empty;
@@ -125,7 +127,7 @@ namespace SpaceProject.src
 
             var OrderedByHumidityArray = OrderedByWindArray.Where(
                                          city => city.BestDayForLaunch.Wind ==
-                                         OrderedByWindArray.First().BestDayForLaunch.Wind)
+                                         OrderedByWindArray[0].BestDayForLaunch.Wind)
                                          .OrderBy(city =>
                                          city.BestDayForLaunch.Humidity).ToArray();
 
@@ -138,9 +140,11 @@ namespace SpaceProject.src
                 return OrderedByHumidityArray[0];
             }
 
+            // Checks in which cities the humidity is the same, orders them
+            // by closest to the equator and returns the first element.
             var FirstByClosestToEquator = OrderedByHumidityArray.Where(
                                 city => city.BestDayForLaunch.Humidity ==
-                                OrderedByHumidityArray.First().BestDayForLaunch.Humidity)
+                                OrderedByHumidityArray[0].BestDayForLaunch.Humidity)
                                 .OrderBy(city => city.Name).First();
 
             leadCondition = $"Location {FirstByClosestToEquator.Name} has " +
@@ -190,7 +194,7 @@ namespace SpaceProject.src
                 throw new ArgumentException("Error. No sender email provided.");
 
             string pattern = @"@outlook\.com$";
-            Regex regex = new Regex(pattern);
+            Regex regex = new Regex(pattern, RegexOptions.None, TimeSpan.FromMilliseconds(100));
             bool isMatch = regex.IsMatch(senderEmail);
             if (!isMatch) throw new ArgumentException("Please provide Outlook email.");
 

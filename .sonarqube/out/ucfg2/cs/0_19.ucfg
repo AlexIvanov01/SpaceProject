@@ -1,0 +1,54 @@
+
+)SpaceProject.src.WeatherData.Humidity.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.csD D("0*
+0D D(*
+1*
+1F F(*
+2
+3*
+2F! F(,*
+3
+4*ô
+3G H(Jd
+b
+H0 H(I
+%0string"__concat*
+H2 H(A
+humidity in %: *
+HA H(H
+
+valuedoubleg
+e
+G0 H(I
+%1string"__concat*%
+G0 G(G
+Invalid argument for *
+H0 H(I
+
+%0stringFD
+G H(J
+%2System.ArgumentException"System.ArgumentException¬
+©
+G H(J
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
+G H(J 
+
+%2System.ArgumentException*
+G0 H(I
+
+%1string"
+J J(
+implicit return*r
+4I I("^
+\
+I I(!5
+SpaceProject.src.WeatherData"
+	_humiditydouble"__id*
+
+valuedouble*
+5*.
+5J J("
+J J(
+implicit return:
+valuedoubleB 
+SpaceProject.src.WeatherDataX

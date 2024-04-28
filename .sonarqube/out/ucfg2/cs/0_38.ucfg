@@ -1,0 +1,35 @@
+
+cSpaceProject.src.CityWeather.CityWeather(SpaceProject.src.CityName, SpaceProject.src.WeatherData[])7
+-/home/alex/c#/SpaceProject/src/CityWeather.cs ("0*
+0 (*
+1*ã
+1 (-W
+U
+ (	
+
+%0void"object.Object()*,
+ (	 
+SpaceProject.src.CityWeather®
+«
+ ( 
+%1SpaceProject.src.CityName"%SpaceProject.src.CityWeather.Name.set*,
+ ( 
+SpaceProject.src.CityWeather*)'
+%
+cityNameSpaceProject.src.CityNameÄ
+Á
+ (,$
+%2SpaceProject.src.WeatherData[]"-SpaceProject.src.CityWeather.WeatherDatas.set*,
+ ( 
+SpaceProject.src.CityWeather*20
+.
+weatherDatasSpaceProject.src.WeatherData[]*
+2*.
+2	 (	"
+ (	
+implicit return:1
+ (,%
+cityNameSpaceProject.src.CityName::
+. (H.
+weatherDatasSpaceProject.src.WeatherData[]B 
+SpaceProject.src.CityWeatherX

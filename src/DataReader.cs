@@ -5,14 +5,17 @@ namespace SpaceProject.src
 {
     public static class DataReader
     {
+        // Method that reads the csv file and saves it as string,
+        // then tries to parse each value from the csv
         private static WeatherData[] ReadCSV(string filePath)
         {
             string[] lines = File.ReadAllLines(filePath);
 
+            // Checks for valid csv formatting
             CheckCSV(lines, filePath);
 
             WeatherData[] weatherData =
-            new WeatherData[lines[0].Split(',').Length - 1];
+            new WeatherData[lines[0].Split(',').Length - 1]; // == columns of csv without header column
 
             for (int i = 0; i < weatherData.Length; i++)
             {
@@ -21,15 +24,15 @@ namespace SpaceProject.src
 
             for (int i = 0; i < lines.Length; i++)
             {
-                string[] values = lines[i].Split(',');
+                string[] values = lines[i].Split(','); //  takes a row and separates all values
 
                 for (int j = 1; j < values.Length; j++)
                 {
                     int tempInt;
                     double tempDouble;
                     bool isParseFailure;
-                    switch (values[0].ToLower().Replace("\"", ""))
-                    {
+                    switch (values[0].ToLower().Replace("\"", "")) // Tries to parse value based on
+                    {                                              // based on header column
                         case "day":
                             isParseFailure = !int.TryParse(values[j], out tempInt);
                             if (isParseFailure)
@@ -45,7 +48,7 @@ namespace SpaceProject.src
                         case "temperature":
                             isParseFailure =
                             !double.TryParse(values[j], NumberStyles.Float,
-                            CultureInfo.InvariantCulture, out tempDouble);
+                            CultureInfo.InvariantCulture, out tempDouble); 
 
                             if (isParseFailure)
                             {
@@ -151,6 +154,8 @@ namespace SpaceProject.src
             return weatherData;
         }
 
+        // Checks if csv has exactly 7 rows, checks if it has at most 15 columns with data,
+        // checks if each header row is unique and checks if all 'day' values are unique.
         private static void CheckCSV(string[] lines, string filePath)
         {
             if (lines.Length != 7)
@@ -180,9 +185,9 @@ namespace SpaceProject.src
             }
 
             // Find the row that starts with "day"
-            string? dayRow = lines.FirstOrDefault(line => line.ToLower()
-                                                              .Replace("\"", "")
-                                                              .StartsWith("day"));
+            string? dayRow = Array.Find(lines, line => line.ToLower()
+                                                            .Replace("\"", "")
+                                                            .StartsWith("day"));
 
             // Check if the day row exists and if all values in it are unique
             if (dayRow != null)
@@ -198,6 +203,8 @@ namespace SpaceProject.src
             }
         }
 
+        // Method that goes to a folder and reads from every city weather csv file
+        // by using the ReadCSV method, which cheks for data validation while reading
         public static List<CityWeather> LoadDataFromFolder(string folderPath)
         {
             var list = new List<CityWeather>();
