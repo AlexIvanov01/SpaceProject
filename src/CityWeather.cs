@@ -166,7 +166,7 @@ namespace SpaceProject.src
                 // Write data rows
                 for (int i = 0; i < cities.Count; i++)
                 {
-                    if (cities[i].BestDayForLaunch == null)
+                    if (cities[i].BestDayForLaunch != null)
                         writer.WriteLine($"\"{cities[i].Name}\", {cities[i].BestDayForLaunch.Day}");
                     else
                         writer.WriteLine($"\"{cities[i].Name}\", \"No suitable day for launch\"");
