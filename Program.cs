@@ -16,6 +16,9 @@ try
     if(bestCity != null)
     System.Console.WriteLine($"\nBest location for launch is {bestCity.Name}.\nReason: {reason}\n");
     else System.Console.WriteLine("No suitable location for the given period.");
+    CityWeather.ExportBestDateToCSV(bestList, out string filePath);
+    if(bestCity != null)
+    CityWeather.SendDataToMail(bestList, bestCity, filePath, "alex_ivanov075@outlook.com", "Ai0889876!", "alexi01@abv.bg");
 }
 catch (Exception ex)
 {

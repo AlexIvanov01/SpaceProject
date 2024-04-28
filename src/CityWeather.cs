@@ -1,3 +1,6 @@
+using System.Text;
+using System.Net;
+using System.Net.Mail;
 
 namespace SpaceProject.src
 {
@@ -64,7 +67,7 @@ namespace SpaceProject.src
 
             if (OrderedByWindArray[0].Wind != OrderedByWindArray[1].Wind)
             {
-                leadCondition = "Day with the lowest wind speed. " + 
+                leadCondition = "Day with the lowest wind speed. " +
                                 "Humidity not accounted.";
                 BestDayForLaunch = OrderedByWindArray[0];
                 return OrderedByWindArray[0];
@@ -91,7 +94,7 @@ namespace SpaceProject.src
                 leadCondition = string.Empty;
                 return null;
             }
-            #pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
 
             var OrderedByWindArray =
                 cities.OrderBy(city => city.BestDayForLaunch.Wind).ToArray();
@@ -99,29 +102,29 @@ namespace SpaceProject.src
             if (OrderedByWindArray.Length == 1)
             {
                 leadCondition = $"Location {OrderedByWindArray[0].Name} " +
-                                "has thee lowest wind speed on day " + 
+                                "has the lowest wind speed on day " +
                                 $"{OrderedByWindArray[0].BestDayForLaunch.Day}. " +
                                 "Humidity not accounted.";
                 return OrderedByWindArray[0];
             }
 
-            if (OrderedByWindArray[0].BestDayForLaunch.Wind != 
+            if (OrderedByWindArray[0].BestDayForLaunch.Wind !=
                 OrderedByWindArray[1].BestDayForLaunch.Wind)
             {
                 leadCondition = $"Location {OrderedByWindArray[0].Name} " +
-                                "has the lowest wind speed on day " + 
+                                "has the lowest wind speed on day " +
                                 $"{OrderedByWindArray[0].BestDayForLaunch.Day}. " +
                                 "Humidity not accounted.";
                 return OrderedByWindArray[0];
             }
 
             var OrderedByHumidityArray = OrderedByWindArray.Where(
-                                         city => city.BestDayForLaunch.Wind == 
+                                         city => city.BestDayForLaunch.Wind ==
                                          OrderedByWindArray.First().BestDayForLaunch.Wind)
-                                         .OrderBy(city => 
+                                         .OrderBy(city =>
                                          city.BestDayForLaunch.Humidity).ToArray();
 
-            if (OrderedByHumidityArray[0].BestDayForLaunch.Humidity != 
+            if (OrderedByHumidityArray[0].BestDayForLaunch.Humidity !=
                 OrderedByHumidityArray[1].BestDayForLaunch.Humidity)
             {
                 leadCondition = $"Location {OrderedByHumidityArray[0].Name} has " +
@@ -140,8 +143,62 @@ namespace SpaceProject.src
                             $"{OrderedByHumidityArray[0].BestDayForLaunch.Day} " +
                             "and is closest to the Equator.";
             return FirstByClosestToEquator;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+        }
 
-            #pragma warning restore CS8602 // Dereference of a possibly null reference.
+        public static void ExportBestDateToCSV(List<CityWeather> cities, out string filePath)
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            filePath = $"{currentDirectory}/LaunchAnalysisReport.csv";
+
+            // Create or overwrite the CSV file
+            using (StreamWriter writer = new StreamWriter(filePath, false, Encoding.UTF8))
+            {
+                // Write header row
+                writer.WriteLine("\"Spaceport\", \"Best Day for launch\"");
+
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+                // Write data rows
+                for (int i = 0; i < cities.Count; i++)
+                {
+                    if (cities[i].BestDayForLaunch == null)
+                        writer.WriteLine($"\"{cities[i].Name}\", {cities[i].BestDayForLaunch.Day}");
+                    else
+                        writer.WriteLine($"\"{cities[i].Name}\", \"No suitable day for launch\"");
+                }
+            }
+            Console.WriteLine($"CSV file '{filePath}' has been created successfully.");
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+        }
+
+        public static void SendDataToMail(List<CityWeather> cities, CityWeather bestLocation,
+         string filePath, string senderEmail, string senderPassword, string receiverEmail)
+        {
+            if (bestLocation.BestDayForLaunch == null)
+                throw new ArgumentException("[bestLocation.BestDayForLaunch] is null.");
+
+            // Create a new MailMessage
+            MailMessage mail = new MailMessage(senderEmail, receiverEmail);
+            mail.Subject = "Space Shuttle Launch Analysis Report";
+            mail.Body = $"Best location for launch is {bestLocation.Name} " + 
+                        $"on day {bestLocation.BestDayForLaunch.Day}.";
+            mail.IsBodyHtml = false;
+
+            // Create SMTP client
+            SmtpClient client = new SmtpClient("smtp-mail.outlook.com");
+            client.Port = 587;
+            client.UseDefaultCredentials = false;
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential(senderEmail, senderPassword);
+
+            // Attach the CSV file
+            Attachment attachment = new Attachment(filePath);
+            mail.Attachments.Add(attachment);
+
+            // Send the email
+            client.Send(mail);
+
+            Console.WriteLine("Email sent successfully.");
         }
     }
 }

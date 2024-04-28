@@ -200,39 +200,32 @@ namespace SpaceProject.src
 
         public static List<CityWeather> LoadDataFromFolder(string folderPath)
         {
-            try
+            var list = new List<CityWeather>();
+
+            string[] fileEntries =
+            Directory.GetFiles(folderPath, "*WeatherData.csv");
+
+            foreach (string filePath in fileEntries)
             {
-                var list = new List<CityWeather>();
+                WeatherData[] cityWeatherData = ReadCSV(filePath);
 
-                string[] fileEntries =
-                Directory.GetFiles(folderPath, "*WeatherData.csv");
+                string cityNameString =
+                Path.GetFileNameWithoutExtension(filePath)
+                    .Replace("WeatherData", "");
 
-                foreach (string filePath in fileEntries)
+                if (!Enum.TryParse(cityNameString, out CityName cityNameEnum))
                 {
-                    WeatherData[] cityWeatherData = ReadCSV(filePath);
-
-                    string cityNameString =
-                    Path.GetFileNameWithoutExtension(filePath)
-                        .Replace("WeatherData", "");
-
-                    if (!Enum.TryParse(cityNameString, out CityName cityNameEnum))
-                    {
-                        throw new FormatException(
-                            "Cannot convert to " +
-                            $"enum the value {cityNameString}.");
-                    }
-
-                    CityWeather currentCity = new(cityNameEnum, cityWeatherData);
-
-                    list.Add(currentCity);
+                    throw new FormatException(
+                        "Cannot convert to " +
+                        $"enum the value {cityNameString}.");
                 }
-                return list;
+
+                CityWeather currentCity = new(cityNameEnum, cityWeatherData);
+
+                list.Add(currentCity);
             }
-            catch (Exception ex)
-            {
-                System.Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
-                throw;
-            }
+            return list;
         }
     }
 }
+
