@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Security;
 using System.Text.RegularExpressions;
+using ConsoleTables;
 
 namespace SpaceProject.src
 {
@@ -27,12 +28,17 @@ namespace SpaceProject.src
 
         public void PrintData()
         {
+            var table = new ConsoleTable("Day", "Temperature [°C]", "Wind [m/s]",
+                         "Humidity [%]","Precipitation [%]","Lighting", "Clouds");
+
+            foreach(var day in WeatherDatas)
+            {
+                table.AddRow(day.Day, day.Temperature, day.Wind, day.Humidity,
+                 day.Precipitation, day.Lighting, day.Clouds);
+            }
 
             System.Console.WriteLine($"\n{Name} weather data:\n");
-            foreach (var day in WeatherDatas)
-            {
-                System.Console.WriteLine(day);
-            }
+            table.Write();
         }
 
         public WeatherData? FindBestDayForLaunch(out string leadCondition)
@@ -93,7 +99,7 @@ namespace SpaceProject.src
                 leadCondition = string.Empty;
                 return null;
             }
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
+            #pragma warning disable CS8602 // Dereference of a possibly null reference.
 
             var OrderedByWindArray =
                 cities.OrderBy(city => city.BestDayForLaunch.Wind).ToArray();
@@ -142,7 +148,7 @@ namespace SpaceProject.src
                             $"{OrderedByHumidityArray[0].BestDayForLaunch.Day} " +
                             "and is closest to the Equator.";
             return FirstByClosestToEquator;
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
+            #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
         public static void ExportBestDateToCSV(List<CityWeather> cities, out string filePath)
@@ -156,7 +162,7 @@ namespace SpaceProject.src
                 // Write header row
                 writer.WriteLine("\"Spaceport\", \"Best Day for launch\"");
 
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
+            #pragma warning disable CS8602 // Dereference of a possibly null reference.
                 // Write data rows
                 for (int i = 0; i < cities.Count; i++)
                 {
@@ -167,7 +173,7 @@ namespace SpaceProject.src
                 }
             }
             Console.WriteLine($"CSV file '{filePath}' has been created successfully.");
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
+            #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
         public static void SendDataToMail(List<CityWeather> cities,
@@ -213,7 +219,7 @@ namespace SpaceProject.src
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential(senderEmail, securePwd);
             securePwd.Dispose();
-
+            System.Console.WriteLine();
             System.Console.WriteLine("Enter receiver: ");
             string receiverEmail = System.Console.ReadLine() ??
                 throw new ArgumentException("Error. No receiver email provided.");

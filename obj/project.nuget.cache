@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P7+A1PgiMSz7v+GQN+KCYchffJgjkoJzwj2gYX5umZEVOpzeZTck8QsWHaabsJecwZyO2ENxbYSIkp64mm8jdg==",
+  "dgSpecHash": "BhQ15L9+XTVTQZGJ6iRW4Aoz7tkVIxv9/E99+sJJFaL0GVpxbtd+M3GN2TFAYYgCVALWt2SsHPeo+D9peTn8+w==",
   "success": true,
   "projectFilePath": "/home/alex/c#/SpaceProject/SpaceProject.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/alex/.nuget/packages/consoletables/2.6.1/consoletables.2.6.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -2,7 +2,7 @@
 namespace SpaceProject.src
 {
     public enum CloudCover
-    {   
+    {
         Cumulus,
         Stratus,
         Stratocumulus,
@@ -32,54 +32,54 @@ namespace SpaceProject.src
         public int Day
         {
             get { return _day; }
-            set 
+            set
             {
-                if(value < 1 || value > 31)
-                    throw new ArgumentException("Invalid argument for " + 
+                if (value < 1 || value > 31)
+                    throw new ArgumentException("Invalid argument for " +
                                                 $"day: {value}");
-                 _day = value;
+                _day = value;
             }
         }
         public double Temperature
         {
             get { return _temperature; }
-            set 
-            { 
-                if(value < -20 || value > 60)
+            set
+            {
+                if (value < -20 || value > 60)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"temperature: {value}");
-                _temperature = value; 
+                _temperature = value;
             }
         }
         public double Wind
         {
             get { return _wind; }
-            set 
-            { 
-                if(value < 0 || value > 40)
+            set
+            {
+                if (value < 0 || value > 40)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"wind speed in m/s: {value}");
-                _wind = value; 
+                _wind = value;
             }
         }
         public double Humidity
         {
             get { return _humidity; }
-            set 
+            set
             {
-                if(value < 0 || value > 100)
-                    throw new ArgumentException("Invalid argument for " + 
+                if (value < 0 || value > 100)
+                    throw new ArgumentException("Invalid argument for " +
                                                 $"humidity in %: {value}");
-                _humidity = value; 
+                _humidity = value;
             }
         }
         public double Precipitation
         {
             get { return _precipitation; }
-            set 
-            { 
-                if(value < 0 || value > 100)
-                    throw new ArgumentException("Invalid argument for " + 
+            set
+            {
+                if (value < 0 || value > 100)
+                    throw new ArgumentException("Invalid argument for " +
                                                 $"precipitation in %: {value}");
                 _precipitation = value;
             }
@@ -87,81 +87,86 @@ namespace SpaceProject.src
         public static double MinTemperatureCriteria
         {
             get { return _minTemperatureCriteria; }
-            set 
-            { 
-                if(value < -20 || value > 60)
+            set
+            {
+                if (value < -20 || value > 60)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"minimal temperature criteria: {value}");
-                if(value > _maxTemperatureCriteria)
+                if (value > _maxTemperatureCriteria)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"minimal temperature criteria: {value}" +
                                                 "Minimal temperature cannot me higher than " +
                                                 "the current maximal temperature " +
                                                 $"({_maxTemperatureCriteria})");
-                _minTemperatureCriteria = value; 
+                _minTemperatureCriteria = value;
             }
         }
         public static double MaxTemperatureCriteria
         {
             get { return _maxTemperatureCriteria; }
-            set 
-            { 
-                if(value < -20 || value > 60)
+            set
+            {
+                if (value < -20 || value > 60)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"maximal temperature criteria: {value}");
-                if(value < _minTemperatureCriteria)
+                if (value < _minTemperatureCriteria)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"maximal temperature criteria: {value}" +
                                                 "Maximal temperature cannot me lower than " +
                                                 "the current minimal temperature " +
                                                 $"({_minTemperatureCriteria})");
-                _maxTemperatureCriteria = value; 
+                _maxTemperatureCriteria = value;
             }
         }
-        
+
         public static double WindCriteria
         {
             get { return _windCriteria; }
-            set 
-            { 
-                if(value < 0 || value > 40)
+            set
+            {
+                if (value < 0 || value > 40)
                     throw new ArgumentException("Invalid argument for " +
                                                 $"wind criteria speed in m/s: {value}");
-                _windCriteria = value; 
+                _windCriteria = value;
             }
         }
         public static double HumidityCriteria
         {
             get { return _humidityCriteria; }
-            set 
+            set
             {
-                if(value < 0 || value > 100)
-                    throw new ArgumentException("Invalid argument for " + 
+                if (value < 0 || value > 100)
+                    throw new ArgumentException("Invalid argument for " +
                                                 $"humidity criteria in %: {value}");
-                _humidityCriteria = value; 
+                _humidityCriteria = value;
             }
         }
         public static double PrecipitationCriteria
         {
             get { return _precipitationCriteria; }
-            set 
-            { 
-                if(value < 0 || value > 100)
-                    throw new ArgumentException("Invalid argument for " + 
+            set
+            {
+                if (value < 0 || value > 100)
+                    throw new ArgumentException("Invalid argument for " +
                                                 $"precipitation in %: {value}");
                 _precipitationCriteria = value;
             }
         }
-        
-        
-        
-        
 
         public override string ToString()
         {
             return $"Day {Day}: Temperature - {Temperature} degrees, Wind - {Wind} m/s, " +
-            $"Humidity - {Humidity}%, Precipitation - {Precipitation}%, " + 
+            $"Humidity - {Humidity}%, Precipitation - {Precipitation}%, " +
             $"Lighting - {Lighting}, Clouds - {Clouds}";
+        }
+
+        public static void SetCriteriaToDefault()
+        {
+            _minTemperatureCriteria = 1;
+            _maxTemperatureCriteria = 32;
+            _windCriteria = 11;
+            _precipitationCriteria = 0;
+            _humidityCriteria = 55;
         }
     }
 }

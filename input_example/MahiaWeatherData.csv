@@ -1,7 +1,7 @@
 "Day",1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-"temperature",31,38,23,31,32,35,39,20,27,31,35,40,38,37,23
-"Wind",7,5,11,4,18,3,7,9,5,9,11,5,15,0,12
-"Humidity",0,43,58,8,22,22,3,45,1,63,36,43,31,30,34
-"Precipitation",0,1,0,3,4,1,1,0,4,2,2,2,2,4,0
+"temperature",24,22,20,29,27,32,24,30,25,20,26,37,27,39,33
+"Wind",15,3,4,18,1,7,2,15,12,6,5,11,3,5,17
+"Humidity",45,15,62,11,66,51,48,17,48,54,3,17,22,63,6
+"Precipitation",2,0,2,3,3,4,1,4,4,0,0,1,0,1,0
 "Lighting","No","No","No","No","Yes","No","No","Yes","Yes","No","No","No","No","No","No"
 "Clouds","Cumulus","Altocumulus","Altocumulus","Nimbus","Nimbus","Cirrocumulus","Altocumulus","Cirrocumulus","Nimbus","Altocumulus","Cirrus","Stratus","Cirrocumulus","Nimbus","Cirrocumulus"

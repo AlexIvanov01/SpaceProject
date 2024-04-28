@@ -13,3 +13,6 @@
 /home/alex/c#/SpaceProject/obj/Debug/net8.0/SpaceProject.pdb
 /home/alex/c#/SpaceProject/obj/Debug/net8.0/SpaceProject.genruntimeconfig.cache
 /home/alex/c#/SpaceProject/obj/Debug/net8.0/ref/SpaceProject.dll
+/home/alex/c#/SpaceProject/bin/Debug/net8.0/ConsoleTables.dll
+/home/alex/c#/SpaceProject/obj/Debug/net8.0/SpaceProject.csproj.AssemblyReference.cache
+/home/alex/c#/SpaceProject/obj/Debug/net8.0/SpaceProject.csproj.CopyComplete
