@@ -1,5 +1,5 @@
-
 namespace SpaceProject.src
+
 {
     public enum CloudCover
     {
