@@ -41,6 +41,11 @@ namespace SpaceProject.src
             table.Write();
         }
 
+        // Method that takes the list of WeatherData and checks by the set criteria
+        // if the day is suitable for launch, if more than 1 is suitable,
+        // orders the suitable days by wind speed, and if 2 or more have 
+        // the same wind speed to the lowest value, orders the WeatherData by humidity
+        // and retunrs the first element
         public WeatherData? FindBestDayForLaunch(out string leadCondition)
         {
             List<WeatherData> goodDays = new List<WeatherData>();
@@ -92,6 +97,10 @@ namespace SpaceProject.src
             return FirstByHumidityDay;
         }
 
+        // Method that compares the most suitable days for launch for each city.
+        // First tries to compare by wind speed, if matching bby lowest speeds percist,
+        // orders them by humidity, if they are matching again, the closest city
+        // to the equator is returned.
         public static CityWeather? FindBestLocation(List<CityWeather> cities, out string leadCondition)
         {
             cities.RemoveAll(city => city.BestDayForLaunch == null);
@@ -125,6 +134,8 @@ namespace SpaceProject.src
                 return OrderedByWindArray[0];
             }
 
+            // Takes the ordered by wind array and finds the cities with the lowest
+            // wind speed that are matching, orders those cities by humidity
             var OrderedByHumidityArray = OrderedByWindArray.Where(
                                          city => city.BestDayForLaunch.Wind ==
                                          OrderedByWindArray[0].BestDayForLaunch.Wind)
@@ -198,7 +209,7 @@ namespace SpaceProject.src
             bool isMatch = regex.IsMatch(senderEmail);
             if (!isMatch) throw new ArgumentException("Please provide Outlook email.");
 
-            // Instantiate the secure string.
+            // Instantiate the secure string for password.
             SecureString securePwd = new SecureString();
             ConsoleKeyInfo key;
 
@@ -207,7 +218,6 @@ namespace SpaceProject.src
             {
                 key = Console.ReadKey(true);
 
-                // Append the character to the password.
                 securePwd.AppendChar(key.KeyChar);
                 Console.Write("*");
 
@@ -223,6 +233,7 @@ namespace SpaceProject.src
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential(senderEmail, securePwd);
             securePwd.Dispose();
+
             System.Console.WriteLine();
             System.Console.WriteLine("Enter receiver: ");
             string receiverEmail = System.Console.ReadLine() ??

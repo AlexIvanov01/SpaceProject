@@ -1,0 +1,6 @@
+/home/alex/c#/SpaceProject/bin/Release/net8.0/publish/SpaceProject
+/home/alex/c#/SpaceProject/bin/Release/net8.0/publish/SpaceProject.dll
+/home/alex/c#/SpaceProject/bin/Release/net8.0/publish/SpaceProject.deps.json
+/home/alex/c#/SpaceProject/bin/Release/net8.0/publish/SpaceProject.runtimeconfig.json
+/home/alex/c#/SpaceProject/bin/Release/net8.0/publish/SpaceProject.pdb
+/home/alex/c#/SpaceProject/bin/Release/net8.0/publish/ConsoleTables.dll
