@@ -1,24 +1,122 @@
 
-1SpaceProject.src.WeatherData.HumidityCriteria.get9
--/home/alex/c#/SpaceProject/src/WeatherData.cs‡ ‡("0*
-0
-‡ ‡(*
-1*‰
-1
-‡ ‡(*s
+7SpaceProject.src.WeatherData.MinTemperatureCriteria.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.csZ Z("0*
+0Z Z(*
+1*
+1\ \(*
+2
+3*
+2\# \(-*
+3
+4*ƒ
+3] ^(Ys
 q
-
-‡ ‡(*
-%retdouble"__id*M
-
-‡ ‡(*?*=
-SpaceProject.src.WeatherData"
-_humidityCriteriadouble*
-2*/
-2
-‡- ‡(-"
-
-‡, ‡(-
-
-%retdoubleB "
+^0 ^(X
+%0string"__concat*.
+^2 ^(P" 
+minimal temperature criteria: *
+^P ^(W
+
+valuedoubleg
+e
+]0 ^(X
+%1string"__concat*%
+]0 ](G
+Invalid argument for *
+^0 ^(X
+
+%0stringFD
+] ^(Y
+%2System.ArgumentException"System.ArgumentException¬
+©
+] ^(Y
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
+] ^(Y 
+
+%2System.ArgumentException*
+]0 ^(X
+
+%1string"
+f f(
+implicit return*
+4_ _(3*
+5
+6*÷
+5` d(Os
+q
+a0 a(X
+%4string"__concat*.
+a2 a(P" 
+minimal temperature criteria: *
+aP a(W
+
+valuedoubleg
+e
+`0 a(X
+%5string"__concat*%
+`0 `(G
+Invalid argument for *
+a0 a(X
+
+%4string|
+z
+`0 b(\
+%6string"__concat*
+`0 a(X
+
+%5string*:
+b0 b(\.,
+*Minimal temperature cannot me higher than r
+p
+`0 c(R
+%7string"__concat*
+`0 b(\
+
+%6string*0
+c0 c(R$"
+ the current maximal temperature ž
+›
+d0 d(N
+%8string"__concat*
+d2 d(3
+(*Q
+d3 d(LE*C
+SpaceProject.src.WeatherData"!
+_maxTemperatureCriteriadouble*
+dL d(M
+)\
+Z
+`0 d(N
+%9string"__concat*
+`0 c(R
+
+%7string*
+d0 d(N
+
+%8stringGE
+` d(O
+%10System.ArgumentException"System.ArgumentException®
+«
+` d(O
+%11System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*-
+` d(O!
+
+%10System.ArgumentException*
+`0 d(N
+
+%9string"
+f f(
+implicit return*€
+6e e(0l
+j
+e e(/C
+SpaceProject.src.WeatherData"!
+_minTemperatureCriteriadouble"__id*
+
+valuedouble*
+7*.
+7f f("
+f f(
+implicit return:
+valuedoubleB "
 SpaceProject.src.WeatherDataX

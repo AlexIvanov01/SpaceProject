@@ -23,273 +23,9 @@
               "resultFile": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
                 "region": {
-                  "startLine": 105,
-                  "startColumn": 40,
-                  "endLine": 105,
-                  "endColumn": 61
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 111,
-                  "startColumn": 36,
-                  "endLine": 111,
-                  "endColumn": 74
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 116,
-                  "startColumn": 17,
-                  "endLine": 116,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 117,
-                  "startColumn": 17,
-                  "endLine": 117,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 121,
-                  "startColumn": 36,
-                  "endLine": 121,
-                  "endColumn": 74
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 127,
-                  "startColumn": 50,
-                  "endLine": 127,
-                  "endColumn": 71
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 128,
-                  "startColumn": 42,
-                  "endLine": 128,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 130,
-                  "startColumn": 42,
-                  "endLine": 130,
-                  "endColumn": 63
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 132,
-                  "startColumn": 17,
-                  "endLine": 132,
-                  "endColumn": 59
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 133,
-                  "startColumn": 17,
-                  "endLine": 133,
-                  "endColumn": 59
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 137,
-                  "startColumn": 36,
-                  "endLine": 137,
-                  "endColumn": 78
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 142,
+                  "startLine": 126,
                   "startColumn": 41,
-                  "endLine": 142,
+                  "endLine": 126,
                   "endColumn": 62
                 }
               }
@@ -311,10 +47,10 @@
               "resultFile": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
                 "region": {
-                  "startLine": 143,
-                  "startColumn": 33,
-                  "endLine": 143,
-                  "endColumn": 80
+                  "startLine": 149,
+                  "startColumn": 36,
+                  "endLine": 149,
+                  "endColumn": 62
                 }
               }
             }
@@ -335,9 +71,81 @@
               "resultFile": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
                 "region": {
-                  "startLine": 148,
-                  "startColumn": 32,
-                  "endLine": 148,
+                  "startLine": 154,
+                  "startColumn": 40,
+                  "endLine": 154,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 160,
+                  "startColumn": 26,
+                  "endLine": 160,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 161,
+                  "startColumn": 17,
+                  "endLine": 161,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 165,
+                  "startColumn": 36,
+                  "endLine": 165,
                   "endColumn": 74
                 }
               }
@@ -359,9 +167,225 @@
               "resultFile": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
                 "region": {
-                  "startLine": 170,
+                  "startLine": 175,
+                  "startColumn": 34,
+                  "endLine": 175,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 176,
+                  "startColumn": 17,
+                  "endLine": 176,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 34,
+                  "endLine": 177,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 181,
+                  "startColumn": 26,
+                  "endLine": 181,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 182,
+                  "startColumn": 17,
+                  "endLine": 182,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 186,
+                  "startColumn": 36,
+                  "endLine": 186,
+                  "endColumn": 78
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 193,
+                  "startColumn": 34,
+                  "endLine": 193,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 194,
+                  "startColumn": 17,
+                  "endLine": 194,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 199,
+                  "startColumn": 32,
+                  "endLine": 199,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 225,
                   "startColumn": 67,
-                  "endLine": 170,
+                  "endLine": 225,
                   "endColumn": 93
                 }
               }
@@ -426,9 +450,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 52,
+                  "startLine": 53,
                   "startColumn": 9,
-                  "endLine": 52,
+                  "endLine": 53,
                   "endColumn": 16
                 }
               }
@@ -437,9 +461,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 56,
+                  "startLine": 57,
                   "startColumn": 13,
-                  "endLine": 56,
+                  "endLine": 57,
                   "endColumn": 15
                 }
               }
@@ -448,9 +472,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 61,
+                  "startLine": 62,
                   "startColumn": 13,
-                  "endLine": 61,
+                  "endLine": 62,
                   "endColumn": 17
                 }
               }
@@ -459,9 +483,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 69,
+                  "startLine": 71,
                   "startColumn": 9,
-                  "endLine": 69,
+                  "endLine": 71,
                   "endColumn": 11
                 }
               }
@@ -470,9 +494,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 72,
+                  "startLine": 74,
                   "startColumn": 9,
-                  "endLine": 72,
+                  "endLine": 74,
                   "endColumn": 13
                 }
               }
@@ -481,9 +505,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 78,
+                  "startLine": 80,
                   "startColumn": 9,
-                  "endLine": 78,
+                  "endLine": 80,
                   "endColumn": 11
                 }
               }
@@ -492,9 +516,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 82,
+                  "startLine": 84,
                   "startColumn": 13,
-                  "endLine": 82,
+                  "endLine": 84,
                   "endColumn": 15
                 }
               }
@@ -503,9 +527,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 88,
+                  "startLine": 90,
                   "startColumn": 9,
-                  "endLine": 88,
+                  "endLine": 90,
                   "endColumn": 11
                 }
               }
@@ -514,9 +538,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/Program.cs",
                 "region": {
-                  "startLine": 90,
+                  "startLine": 92,
                   "startColumn": 5,
-                  "endLine": 90,
+                  "endLine": 92,
                   "endColumn": 10
                 }
               }
@@ -608,27 +632,6 @@
           }
         },
         {
-          "ruleId": "S1104",
-          "level": "warning",
-          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 29,
-                  "endLine": 22,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1192",
           "level": "warning",
           "message": "Define a constant instead of using this literal 'double type at ' 4 times.",
@@ -637,9 +640,9 @@
               "resultFile": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 54,
+                  "startLine": 57,
                   "startColumn": 37,
-                  "endLine": 54,
+                  "endLine": 57,
                   "endColumn": 54
                 }
               }
@@ -650,9 +653,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 69,
+                  "startLine": 72,
                   "startColumn": 37,
-                  "endLine": 69,
+                  "endLine": 72,
                   "endColumn": 54
                 }
               }
@@ -661,9 +664,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 84,
+                  "startLine": 87,
                   "startColumn": 37,
-                  "endLine": 84,
+                  "endLine": 87,
                   "endColumn": 54
                 }
               }
@@ -672,10 +675,31 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 99,
+                  "startLine": 102,
                   "startColumn": 37,
-                  "endLine": 99,
+                  "endLine": 102,
                   "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 29,
+                  "endLine": 23,
+                  "endColumn": 45
                 }
               }
             }
@@ -837,9 +861,9 @@
               "resultFile": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 8,
+                  "startLine": 10,
                   "startColumn": 38,
-                  "endLine": 8,
+                  "endLine": 10,
                   "endColumn": 45
                 }
               }
@@ -850,9 +874,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 17,
+                  "startLine": 20,
                   "startColumn": 13,
-                  "endLine": 17,
+                  "endLine": 20,
                   "endColumn": 16
                 }
               }
@@ -861,9 +885,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 22,
+                  "startLine": 25,
                   "startColumn": 13,
-                  "endLine": 22,
+                  "endLine": 25,
                   "endColumn": 16
                 }
               }
@@ -872,9 +896,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 26,
+                  "startLine": 29,
                   "startColumn": 17,
-                  "endLine": 26,
+                  "endLine": 29,
                   "endColumn": 20
                 }
               }
@@ -883,9 +907,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 31,
+                  "startLine": 34,
                   "startColumn": 21,
-                  "endLine": 31,
+                  "endLine": 34,
                   "endColumn": 27
                 }
               }
@@ -894,9 +918,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 35,
+                  "startLine": 38,
                   "startColumn": 29,
-                  "endLine": 35,
+                  "endLine": 38,
                   "endColumn": 31
                 }
               }
@@ -905,9 +929,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 50,
+                  "startLine": 53,
                   "startColumn": 29,
-                  "endLine": 50,
+                  "endLine": 53,
                   "endColumn": 31
                 }
               }
@@ -916,9 +940,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 65,
+                  "startLine": 68,
                   "startColumn": 29,
-                  "endLine": 65,
+                  "endLine": 68,
                   "endColumn": 31
                 }
               }
@@ -927,9 +951,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 80,
+                  "startLine": 83,
                   "startColumn": 29,
-                  "endLine": 80,
+                  "endLine": 83,
                   "endColumn": 31
                 }
               }
@@ -938,9 +962,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 95,
+                  "startLine": 98,
                   "startColumn": 29,
-                  "endLine": 95,
+                  "endLine": 98,
                   "endColumn": 31
                 }
               }
@@ -949,9 +973,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 106,
+                  "startLine": 109,
                   "startColumn": 29,
-                  "endLine": 106,
+                  "endLine": 109,
                   "endColumn": 31
                 }
               }
@@ -960,9 +984,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 112,
+                  "startLine": 115,
                   "startColumn": 29,
-                  "endLine": 112,
+                  "endLine": 115,
                   "endColumn": 33
                 }
               }
@@ -971,9 +995,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 117,
+                  "startLine": 120,
                   "startColumn": 29,
-                  "endLine": 117,
+                  "endLine": 120,
                   "endColumn": 33
                 }
               }
@@ -982,9 +1006,9 @@
               "physicalLocation": {
                 "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
                 "region": {
-                  "startLine": 132,
+                  "startLine": 135,
                   "startColumn": 29,
-                  "endLine": 132,
+                  "endLine": 135,
                   "endColumn": 31
                 }
               }
@@ -1007,300 +1031,6 @@
               "8": "+4 (incl 3 for nesting)",
               "9": "+4 (incl 3 for nesting)"
             }
-          }
-        },
-        {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 50,
-                  "startColumn": 34,
-                  "endLine": 50,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1244",
-          "level": "warning",
-          "message": "Do not check floating point inequality with exact values, use a range instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 76,
-                  "startColumn": 44,
-                  "endLine": 76,
-                  "endColumn": 46
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1244",
-          "level": "warning",
-          "message": "Do not check floating point equality with exact values, use a range instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 85,
-                  "startColumn": 33,
-                  "endLine": 85,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at 0 should be used instead of the \"Enumerable\" extension method \"First\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 69,
-                  "startColumn": 45,
-                  "endLine": 69,
-                  "endColumn": 50
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at 0 should be used instead of the \"Enumerable\" extension method \"First\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 70,
-                  "startColumn": 33,
-                  "endLine": 70,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at 0 should be used instead of the \"Enumerable\" extension method \"First\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 85,
-                  "startColumn": 55,
-                  "endLine": 85,
-                  "endColumn": 60
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6602",
-          "level": "warning",
-          "message": "\"Array.Find\" static method should be used instead of the \"FirstOrDefault\" extension method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/DataReader.cs",
-                "region": {
-                  "startLine": 183,
-                  "startColumn": 36,
-                  "endLine": 183,
-                  "endColumn": 50
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1244",
-          "level": "warning",
-          "message": "Do not check floating point inequality with exact values, use a range instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 116,
-                  "startColumn": 61,
-                  "endLine": 116,
-                  "endColumn": 63
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1244",
-          "level": "warning",
-          "message": "Do not check floating point equality with exact values, use a range instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 127,
-                  "startColumn": 77,
-                  "endLine": 127,
-                  "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1244",
-          "level": "warning",
-          "message": "Do not check floating point inequality with exact values, use a range instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 132,
-                  "startColumn": 69,
-                  "endLine": 132,
-                  "endColumn": 71
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1244",
-          "level": "warning",
-          "message": "Do not check floating point equality with exact values, use a range instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 142,
-                  "startColumn": 72,
-                  "endLine": 142,
-                  "endColumn": 74
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at 0 should be used instead of the \"Enumerable\" extension method \"First\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 128,
-                  "startColumn": 61,
-                  "endLine": 128,
-                  "endColumn": 66
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at 0 should be used instead of the \"Enumerable\" extension method \"First\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 143,
-                  "startColumn": 56,
-                  "endLine": 143,
-                  "endColumn": 61
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6444",
-          "level": "warning",
-          "message": "Pass a timeout to limit the execution time.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/alex/c%23/SpaceProject/src/CityWeather.cs",
-                "region": {
-                  "startLine": 193,
-                  "startColumn": 27,
-                  "endLine": 193,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
           }
         }
       ],
@@ -1335,23 +1065,6 @@
             ]
           }
         },
-        "S1125": {
-          "id": "S1125",
-          "shortDescription": "Boolean literals should not be redundant",
-          "fullDescription": "A boolean literal can be represented in two different ways: true or false. They can be combined with logical operators (!, &&, ||, ==, !=) to produce logical expressions that represent truth values. However, comparing a boolean literal to a variable or expression that evaluates to a boolean value is unnecessary and can make the code harder to read and understand. The more complex a boolean expression is, the harder it will be for developers to understand its meaning and expected behavior, and it will favour the introduction of new bugs.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
         "S1192": {
           "id": "S1192",
           "shortDescription": "String literals should not be duplicated",
@@ -1368,23 +1081,6 @@
             ]
           }
         },
-        "S1244": {
-          "id": "S1244",
-          "shortDescription": "Floating point numbers should not be tested for equality",
-          "fullDescription": "Floating point numbers in C# (and in most other programming languages) are not precise. They are a binary approximation of the actual value. This means that even if two floating point numbers appear to be equal, they might not be due to the tiny differences in their binary representation.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1244",
-          "properties": {
-            "category": "Major Bug",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
         "S3776": {
           "id": "S3776",
           "shortDescription": "Cognitive Complexity of methods should not be too high",
@@ -1394,56 +1090,6 @@
           "properties": {
             "category": "Critical Code Smell",
             "isEnabledByDefault": false,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S6444": {
-          "id": "S6444",
-          "shortDescription": "Not specifying a timeout for regular expressions is security-sensitive",
-          "fullDescription": "Not specifying a timeout for regular expressions can lead to a Denial-of-Service attack. Pass a timeout when using System.Text.RegularExpressions to process untrusted input because a malicious user might craft a value for which the evaluation lasts excessively long.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6444",
-          "properties": {
-            "category": "Major Security Hotspot",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S6602": {
-          "id": "S6602",
-          "shortDescription": "\"Find\" method should be used instead of the \"FirstOrDefault\" extension",
-          "fullDescription": "Both the List.Find method and IEnumerable.FirstOrDefault method can be used to find the first element that satisfies a given condition in a collection. However, List.Find can be faster than IEnumerable.FirstOrDefault for List objects. For small collections, the performance difference may be minor, but for large collections, it can make a noticeable difference. The same applies for ImmutableList and arrays too.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6602",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S6608": {
-          "id": "S6608",
-          "shortDescription": "Prefer indexing instead of \"Enumerable\" methods on types implementing \"IList\"",
-          "fullDescription": "Indexes in C# provide direct access to an element at a specific position within an array or collection. When compared to Enumerable methods, indexing can be more efficient for certain scenarios, such as iterating over a large collection, due to avoiding the overhead of checking the underlying collection type before accessing it.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6608",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
             "tags": [
               "C#",
               "MainSourceScope",

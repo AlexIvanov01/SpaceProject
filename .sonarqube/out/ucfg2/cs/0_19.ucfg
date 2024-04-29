@@ -1,54 +1,54 @@
 
-)SpaceProject.src.WeatherData.Humidity.set7
--/home/alex/c#/SpaceProject/src/WeatherData.csD D("0*
-0D D(*
+,SpaceProject.src.WeatherData.Temperature.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs. .("0*
+0. .(*
 1*
-1F F(*
+10 0(*
 2
 3*
-2F! F(,*
+20# 0(-*
 3
-4*ô
-3G H(Jd
-b
-H0 H(I
-%0string"__concat*
-H2 H(A
-humidity in %: *
-HA H(H
+4*ò
+31 2(Hb
+`
+20 2(G
+%0string"__concat*
+22 2(?
+temperature: *
+2? 2(F
 
 valuedoubleg
 e
-G0 H(I
+10 2(G
 %1string"__concat*%
-G0 G(G
+10 1(G
 Invalid argument for *
-H0 H(I
+20 2(G
 
 %0stringFD
-G H(J
+1 2(H
 %2System.ArgumentException"System.ArgumentException¬
 ©
-G H(J
+1 2(H
 %3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
-G H(J 
+1 2(H 
 
 %2System.ArgumentException*
-G0 H(I
+10 2(G
 
 %1string"
-J J(
-implicit return*r
-4I I("^
-\
-I I(!5
-SpaceProject.src.WeatherData"
-	_humiditydouble"__id*
+4 4(
+implicit return*u
+43 3(%a
+_
+3 3($8
+SpaceProject.src.WeatherData"
+_temperaturedouble"__id*
 
 valuedouble*
 5*.
-5J J("
-J J(
+54 4("
+4 4(
 implicit return:
 valuedoubleB 
 SpaceProject.src.WeatherDataX

@@ -1,18 +1,18 @@
 
-%SpaceProject.src.WeatherData.Wind.get7
--/home/alex/c#/SpaceProject/src/WeatherData.cs8 8("0*
-08 8(*
-1*w
-18 8(c
-a
-8 8(
-%retdouble"__id*?
-8 8(3*1
-SpaceProject.src.WeatherData"
-_winddouble*
-2*+
-28! 8(!"
-8  8(!
-
-%retdoubleB 
+$SpaceProject.src.WeatherData.Day.get7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs" "("0*
+0" "(*
+1*p
+1" "(\
+Z
+" "(
+%retint"__id*;
+" "(/*-
+SpaceProject.src.WeatherData"
+_dayint*
+2*(
+2"  "( "
+" "( 
+
+%retintB 
 SpaceProject.src.WeatherDataX

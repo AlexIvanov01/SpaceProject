@@ -45,7 +45,7 @@ namespace SpaceProject.src
         // if the day is suitable for launch, if more than 1 is suitable,
         // orders the suitable days by wind speed, and if 2 or more have 
         // the same wind speed to the lowest value, orders the WeatherData by humidity
-        // and retunrs the first element
+        // and retunrs the first element.
         public WeatherData? FindBestDayForLaunch(out string leadCondition)
         {
             List<WeatherData> goodDays = new List<WeatherData>();
@@ -74,11 +74,15 @@ namespace SpaceProject.src
                 BestDayForLaunch = goodDays[0];
                 return goodDays[0];
             }
-
+             // Orders all days that pass the set criteria and converts to array.
             var OrderedByWindArray =
             goodDays.OrderBy(day => day.Wind).ToArray();
 
-            if (OrderedByWindArray[0].Wind != OrderedByWindArray[1].Wind)
+            // Checks if the first value of the ordered array by wind is close enough to the
+            // second value by using epsilon to negate unexpected rounding done by the type 
+            // double. Returns the first element of the ordered array if the values of the wind
+            //  speed are enough different.
+            if (Math.Abs(OrderedByWindArray[0].Wind - OrderedByWindArray[1].Wind) >= double.Epsilon)
             {
                 leadCondition = "Day with the lowest wind speed. " +
                                 "Humidity not accounted.";
@@ -88,44 +92,72 @@ namespace SpaceProject.src
 
             // Takes every day that has the same wind speed as the first day,
             // and orders them by humidity. Returns the first day from the new array.
-            var FirstByHumidityDay = OrderedByWindArray.Where(
-                day => day.Wind == OrderedByWindArray[0].Wind).OrderBy(
-                    day => day.Humidity).First();
+            // Uses epsilon to negate irrelevant difference made by rounding 
+            // errors from calculations with double type.
+            var FirstByHumidityDay = OrderedByWindArray.Where(day =>
+                Math.Abs(day.Wind - OrderedByWindArray[0].Wind) <= double.Epsilon)
+                .OrderBy(day => day.Humidity).First();
 
             leadCondition = "Day with the lowest wind speed and humidity.";
             BestDayForLaunch = FirstByHumidityDay;
             return FirstByHumidityDay;
         }
 
-        // Method that compares the most suitable days for launch for each city.
-        // First tries to compare by wind speed, if matching bby lowest speeds percist,
+        // Method that compares the most suitable days for launch in each city.
+        // First tries to compare by wind speed, if matching by lowest speeds percist,
         // orders them by humidity, if they are matching again, the closest city
         // to the equator is returned.
-        public static CityWeather? FindBestLocation(List<CityWeather> cities, out string leadCondition)
+        public static CityWeather? FindBestLocation(List<CityWeather> citiesList, out string leadCondition)
         {
+            // Removes all cities that do not have a suitable day for launch
+            // To not change the original list, elements are coppied to a new list.
+            List<CityWeather> cities = new List<CityWeather>(citiesList);
             cities.RemoveAll(city => city.BestDayForLaunch == null);
-            // Check for null reference
+
+            var table = new ConsoleTable("City", "Day", "Temperature [°C]", "Wind [m/s]",
+                         "Humidity [%]", "Precipitation [%]", "Lighting", "Clouds");
+
+            // Null check provided. Disable false warning.
+            #pragma warning disable CS8602 // Dereference of a possibly null reference. 
+
+            foreach (var city in cities)
+            {
+                table.AddRow(city.Name, city.BestDayForLaunch.Day, city.BestDayForLaunch.Temperature,
+                 city.BestDayForLaunch.Wind, city.BestDayForLaunch.Humidity,
+                 city.BestDayForLaunch.Precipitation, city.BestDayForLaunch.Lighting,
+                 city.BestDayForLaunch.Clouds);
+            }
+
+            System.Console.WriteLine("\n Most suitable day for each city: \n");
+            table.Write();
+
+            // Check for null reference, no suitable day for launch in any city 
+            // for the given period
             if (cities.Count == 0)
             {
                 leadCondition = string.Empty;
                 return null;
             }
-            #pragma warning disable CS8602 // Dereference of a possibly null reference.
+
+
+            // Check if only 1 city is suitable for launch for the given period.
+            if (cities.Count == 1)
+            {
+                leadCondition = $"Location {cities[0].Name} " +
+                                "is the only suitable city for launch on day " +
+                                $"{cities[0].BestDayForLaunch.Day}. ";
+                return cities[0];
+            }
 
             var OrderedByWindArray =
                 cities.OrderBy(city => city.BestDayForLaunch.Wind).ToArray();
 
-            if (OrderedByWindArray.Length == 1)
-            {
-                leadCondition = $"Location {OrderedByWindArray[0].Name} " +
-                                "has the lowest wind speed on day " +
-                                $"{OrderedByWindArray[0].BestDayForLaunch.Day}. " +
-                                "Humidity not accounted.";
-                return OrderedByWindArray[0];
-            }
-
-            if (OrderedByWindArray[0].BestDayForLaunch.Wind !=
-                OrderedByWindArray[1].BestDayForLaunch.Wind)
+            // Checks if the wind speed of the first city in the orderer array
+            // is different enough to the wind speed of the second by using
+            // epsilon to negate irrelevant difference made by rounding 
+            // errors from calculations with double type.
+            if (Math.Abs(OrderedByWindArray[0].BestDayForLaunch.Wind -
+                OrderedByWindArray[1].BestDayForLaunch.Wind) >= double.Epsilon)
             {
                 leadCondition = $"Location {OrderedByWindArray[0].Name} " +
                                 "has the lowest wind speed on day " +
@@ -135,15 +167,18 @@ namespace SpaceProject.src
             }
 
             // Takes the ordered by wind array and finds the cities with the lowest
-            // wind speed that are matching, orders those cities by humidity
+            // wind speed that are matching, orders those cities by humidity.
+            // Uses epsilon to negate irrelevant difference made by rounding 
+            // errors from calculations with double type.
             var OrderedByHumidityArray = OrderedByWindArray.Where(
-                                         city => city.BestDayForLaunch.Wind ==
-                                         OrderedByWindArray[0].BestDayForLaunch.Wind)
-                                         .OrderBy(city =>
-                                         city.BestDayForLaunch.Humidity).ToArray();
-
-            if (OrderedByHumidityArray[0].BestDayForLaunch.Humidity !=
-                OrderedByHumidityArray[1].BestDayForLaunch.Humidity)
+                city => Math.Abs(city.BestDayForLaunch.Wind - 
+                OrderedByWindArray[0].BestDayForLaunch.Wind) <= double.Epsilon)
+                .OrderBy(city => city.BestDayForLaunch.Humidity).ToArray();
+            
+            // Checks if the fisrt 2 values of the ordered by humidity array
+            // are different enough by using epsilon.
+            if (Math.Abs(OrderedByHumidityArray[0].BestDayForLaunch.Humidity -
+                OrderedByHumidityArray[1].BestDayForLaunch.Humidity) >= double.Epsilon)
             {
                 leadCondition = $"Location {OrderedByHumidityArray[0].Name} has " +
                                 "the lowest wind speed and humidity on day " +
@@ -154,9 +189,9 @@ namespace SpaceProject.src
             // Checks in which cities the humidity is the same, orders them
             // by closest to the equator and returns the first element.
             var FirstByClosestToEquator = OrderedByHumidityArray.Where(
-                                city => city.BestDayForLaunch.Humidity ==
-                                OrderedByHumidityArray[0].BestDayForLaunch.Humidity)
-                                .OrderBy(city => city.Name).First();
+                city => Math.Abs(city.BestDayForLaunch.Humidity -
+                OrderedByHumidityArray[0].BestDayForLaunch.Humidity) <= double.Epsilon)
+                .OrderBy(city => city.Name).First();
 
             leadCondition = $"Location {FirstByClosestToEquator.Name} has " +
                             "the lowest wind speed and humidity on day " +
@@ -166,6 +201,8 @@ namespace SpaceProject.src
             #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
+        // Method takes each city's most suiatble day for
+        // launch and exports the day to a csv file.  
         public static void ExportBestDateToCSV(List<CityWeather> cities, out string filePath)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
@@ -177,25 +214,30 @@ namespace SpaceProject.src
                 // Write header row
                 writer.WriteLine("\"Spaceport\", \"Best Day for launch\"");
 
+            // Disable false warning.
             #pragma warning disable CS8602 // Dereference of a possibly null reference.
                 // Write data rows
                 for (int i = 0; i < cities.Count; i++)
                 {
+                    // Check for null reference
                     if (cities[i].BestDayForLaunch != null)
                         writer.WriteLine($"\"{cities[i].Name}\", {cities[i].BestDayForLaunch.Day}");
                     else
-                        writer.WriteLine($"\"{cities[i].Name}\", \"No suitable day for launch\"");
+                        writer.WriteLine($"\"{cities[i].Name}\", \"No suitable day for launch\""); 
                 }
             }
             Console.WriteLine($"CSV file '{filePath}' has been created successfully.");
             #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
-        public static void SendDataToMail(List<CityWeather> cities,
-                                          CityWeather bestLocation, string filePath)
+        // Method takes a city's most suitable day for launch and puts it in a
+        // body of a mail to be send with outlook smtp service.
+        // Method takes a file path to a file and attaches it to the mail.
+        public static void SendDataToMail(CityWeather bestLocation, string filePath)
         {
             if (bestLocation.BestDayForLaunch == null)
-                throw new ArgumentException("[bestLocation.BestDayForLaunch] is null.");
+                throw new ArgumentException("To send data to mail, provide a city " + 
+                                            "that has a suitable date for launch");
 
             System.Console.WriteLine("\nPlease provide full outlook sender email, password and " +
                              "receiver email to send results to mail.\n");
@@ -213,7 +255,7 @@ namespace SpaceProject.src
             SecureString securePwd = new SecureString();
             ConsoleKeyInfo key;
 
-            Console.Write("Enter password: ");
+            Console.Write("Enter password: \n");
             do
             {
                 key = Console.ReadKey(true);
@@ -238,6 +280,8 @@ namespace SpaceProject.src
             System.Console.WriteLine("Enter receiver: ");
             string receiverEmail = System.Console.ReadLine() ??
                 throw new ArgumentException("Error. No receiver email provided.");
+
+            System.Console.WriteLine("\nSending mail...");
 
             // Create a new MailMessage
             MailMessage mail = new MailMessage(senderEmail, receiverEmail);

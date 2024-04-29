@@ -1,18 +1,54 @@
 
-7SpaceProject.src.WeatherData.MinTemperatureCriteria.get7
--/home/alex/c#/SpaceProject/src/WeatherData.csY Y("0*
-0Y Y(*
-1*‰
-1Y Y(0u
-s
-Y Y(0
-%retdouble"__id*Q
-Y Y(0E*C
-SpaceProject.src.WeatherData"!
-_minTemperatureCriteriadouble*
-2*+
-2Y3 Y(3"
-Y2 Y(3
-
-%retdoubleB "
+%SpaceProject.src.WeatherData.Wind.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs9 9("0*
+09 9(*
+1*
+1; ;(*
+2
+3*
+2;! ;(+*
+3
+4*ø
+3< =(Nh
+f
+=0 =(M
+%0string"__concat*#
+=2 =(E
+wind speed in m/s: *
+=E =(L
+
+valuedoubleg
+e
+<0 =(M
+%1string"__concat*%
+<0 <(G
+Invalid argument for *
+=0 =(M
+
+%0stringFD
+< =(N
+%2System.ArgumentException"System.ArgumentException¬
+©
+< =(N
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
+< =(N 
+
+%2System.ArgumentException*
+<0 =(M
+
+%1string"
+? ?(
+implicit return*n
+4> >(Z
+X
+> >(1
+SpaceProject.src.WeatherData"
+_winddouble"__id*
+
+valuedouble*
+5*.
+5? ?("
+? ?(
+implicit return:
+valuedoubleB 
 SpaceProject.src.WeatherDataX

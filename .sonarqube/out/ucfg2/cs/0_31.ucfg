@@ -1,73 +1,122 @@
 
-6SpaceProject.src.WeatherData.PrecipitationCriteria.set9
--/home/alex/c#/SpaceProject/src/WeatherData.cs“ “("0*
-0
-“ “(*
-1*
-1
-• •(*
+7SpaceProject.src.WeatherData.MaxTemperatureCriteria.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.csk k("0*
+0k k(*
+1*
+1m m(*
 2
-3*
-2
-•! •(,*
+3*
+2m# m(-*
 3
-4*‘
-3
-– —(Oo
-m
-
-—0 —(N
-%0string"__concat*&
-
-—2 —(F
-precipitation in %: *
-
-—F —(M
+4*ƒ
+3n o(Ys
+q
+o0 o(X
+%0string"__concat*.
+o2 o(P" 
+maximal temperature criteria: *
+oP o(W
 
-valuedoublem
-k
-
-–0 —(N
-%1string"__concat*'
-
-–0 –(G
-Invalid argument for *
-
-—0 —(N
+valuedoubleg
+e
+n0 o(X
+%1string"__concat*%
+n0 n(G
+Invalid argument for *
+o0 o(X
 
-%0stringHF
-
-– —(O
-%2System.ArgumentException"System.ArgumentException²
-¯
-
-– —(O
-%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*.
-
-– —(O 
+%0stringFD
+n o(Y
+%2System.ArgumentException"System.ArgumentException¬
+©
+n o(Y
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
+n o(Y 
 
-%2System.ArgumentException*
-
-–0 —(N
+%2System.ArgumentException*
+n0 o(X
 
-%1string"!
-
-™ ™(
-implicit return*ƒ
-4
-˜ ˜(/m
-k
-
-˜ ˜(.B
-SpaceProject.src.WeatherData" 
-_precipitationCriteriadouble"__id*
+%1string"
+w w(
+implicit return*
+4p p(3*
+5
+6*ö
+5q u(Os
+q
+r0 r(X
+%4string"__concat*.
+r2 r(P" 
+maximal temperature criteria: *
+rP r(W
+
+valuedoubleg
+e
+q0 r(X
+%5string"__concat*%
+q0 q(G
+Invalid argument for *
+r0 r(X
+
+%4string{
+y
+q0 s([
+%6string"__concat*
+q0 r(X
+
+%5string*9
+s0 s([-+
+)Maximal temperature cannot me lower than r
+p
+q0 t(R
+%7string"__concat*
+q0 s([
+
+%6string*0
+t0 t(R$"
+ the current minimal temperature ž
+›
+u0 u(N
+%8string"__concat*
+u2 u(3
+(*Q
+u3 u(LE*C
+SpaceProject.src.WeatherData"!
+_minTemperatureCriteriadouble*
+uL u(M
+)\
+Z
+q0 u(N
+%9string"__concat*
+q0 t(R
+
+%7string*
+u0 u(N
+
+%8stringGE
+q u(O
+%10System.ArgumentException"System.ArgumentException®
+«
+q u(O
+%11System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*-
+q u(O!
+
+%10System.ArgumentException*
+q0 u(N
+
+%9string"
+w w(
+implicit return*€
+6v v(0l
+j
+v v(/C
+SpaceProject.src.WeatherData"!
+_maxTemperatureCriteriadouble"__id*
 
 valuedouble*
-5*2
-5
-™ ™("!
-
-™ ™(
+7*.
+7w w("
+w w(
 implicit return:
 valuedoubleB "
 SpaceProject.src.WeatherDataX

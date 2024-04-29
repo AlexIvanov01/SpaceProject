@@ -1,18 +1,54 @@
 
-.SpaceProject.src.WeatherData.Precipitation.get7
--/home/alex/c#/SpaceProject/src/WeatherData.csN N("0*
-0N N(*
-1*€
-1N N('l
-j
-N N('
-%retdouble"__id*H
-N N('<*:
-SpaceProject.src.WeatherData"
-_precipitationdouble*
-2*+
-2N* N(*"
-N) N(*
-
-%retdoubleB 
+$SpaceProject.src.WeatherData.Day.set7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs# #("0*
+0# #(*
+1*
+1% %(*
+2
+3*
+2%! %(+*
+3
+4*ç
+3& '(@W
+U
+'0 '(?
+%0string"__concat*
+'2 '(7	
+day: *
+'7 '(>
+
+valueintg
+e
+&0 '(?
+%1string"__concat*%
+&0 &(G
+Invalid argument for *
+'0 '(?
+
+%0stringFD
+& '(@
+%2System.ArgumentException"System.ArgumentException¬
+©
+& '(@
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
+& '(@ 
+
+%2System.ArgumentException*
+&0 '(?
+
+%1string"
+) )(
+implicit return*g
+4( ((S
+Q
+( ((-
+SpaceProject.src.WeatherData"
+_dayint"__id*
+
+valueint*
+5*.
+5) )("
+) )(
+implicit return:
+valueintB 
 SpaceProject.src.WeatherDataX

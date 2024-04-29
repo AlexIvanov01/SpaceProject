@@ -1,18 +1,18 @@
 
-)SpaceProject.src.WeatherData.Humidity.get7
--/home/alex/c#/SpaceProject/src/WeatherData.csC C("0*
-0C C(*
-1*{
-1C C("g
-e
-C C("
-%retdouble"__id*C
-C C("7*5
-SpaceProject.src.WeatherData"
-	_humiditydouble*
+,SpaceProject.src.WeatherData.Temperature.get7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs- -("0*
+0- -(*
+1*~
+1- -(%j
+h
+- -(%
+%retdouble"__id*F
+- -(%:*8
+SpaceProject.src.WeatherData"
+_temperaturedouble*
 2*+
-2C% C(%"
-C$ C(%
+2-( -(("
+-' -((
 
 %retdoubleB 
 SpaceProject.src.WeatherDataX

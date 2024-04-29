@@ -1,54 +1,18 @@
 
-.SpaceProject.src.WeatherData.Precipitation.set7
--/home/alex/c#/SpaceProject/src/WeatherData.csO O("0*
-0O O(*
-1*
-1Q Q(*
-2
-3*
-2Q! Q(,*
-3
-4*ù
-3R S(Oi
-g
-S0 S(N
-%0string"__concat*$
-S2 S(F
-precipitation in %: *
-SF S(M
-
-valuedoubleg
-e
-R0 S(N
-%1string"__concat*%
-R0 R(G
-Invalid argument for *
-S0 S(N
-
-%0stringFD
-R S(O
-%2System.ArgumentException"System.ArgumentException¬
-©
-R S(O
-%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
-R S(O 
-
-%2System.ArgumentException*
-R0 S(N
-
-%1string"
-U U(
-implicit return*w
-4T T('c
+%SpaceProject.src.WeatherData.Wind.get7
+-/home/alex/c#/SpaceProject/src/WeatherData.cs8 8("0*
+08 8(*
+1*w
+18 8(c
 a
-T T(&:
-SpaceProject.src.WeatherData"
-_precipitationdouble"__id*
-
-valuedouble*
-5*.
-5U U("
-U U(
-implicit return:
-valuedoubleB 
+8 8(
+%retdouble"__id*?
+8 8(3*1
+SpaceProject.src.WeatherData"
+_winddouble*
+2*+
+28! 8(!"
+8  8(!
+
+%retdoubleB 
 SpaceProject.src.WeatherDataX

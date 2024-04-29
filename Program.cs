@@ -45,6 +45,7 @@ while (true)
         }
         else WeatherData.SetCriteriaToDefault();
 
+        System.Console.WriteLine("\nLoading data...\n");
         var cityList = new List<CityWeather>();
         cityList = DataReader.LoadDataFromFolder(filePath);
         string reason;
@@ -64,10 +65,11 @@ while (true)
         }
 
         var bestCityLocation = CityWeather.FindBestLocation(cityList, out reason);
+
         System.Console.WriteLine("----------------------------------------------" +
                                 "-----------------------------------------------");
         if (bestCityLocation != null)
-            System.Console.WriteLine($"Best location for launch is " +
+            System.Console.WriteLine($"\nBest location for launch is " +
             $"{bestCityLocation.Name}.\nReason: {reason}\n");
         else System.Console.WriteLine("No suitable location for the given period.");
         System.Console.WriteLine("----------------------------------------------" +
@@ -80,7 +82,7 @@ while (true)
             System.Console.WriteLine("\nDo you want to send data to mail with outlook account? (y/n): ");
             string mailChoice = System.Console.ReadLine() ?? "y";
             if (mailChoice.ToLower().Equals("y"))
-                CityWeather.SendDataToMail(cityList, bestCityLocation, exportFilePath);
+                CityWeather.SendDataToMail(bestCityLocation, exportFilePath);
         }
 
         System.Console.WriteLine("\nExit? (y/n): ");

@@ -1,54 +1,16 @@
 
-$SpaceProject.src.WeatherData.Day.set7
--/home/alex/c#/SpaceProject/src/WeatherData.cs# #("0*
-0# #(*
-1*
-1% %(*
-2
-3*
-2%! %(+*
-3
-4*Á
-3& '(@W
-U
-'0 '(?
-%0string"__concat*
-'2 '(7	
-day: *
-'7 '(>
-
-valueintg
-e
-&0 '(?
-%1string"__concat*%
-&0 &(G
-Invalid argument for *
-'0 '(?
-
-%0stringFD
-& '(@
-%2System.ArgumentException"System.ArgumentException¨
-©
-& '(@
-%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*,
-& '(@ 
-
-%2System.ArgumentException*
-&0 '(?
-
-%1string"
-) )(
-implicit return*g
-4( ((S
-Q
-( ((-
-SpaceProject.src.WeatherData"
-_dayint"__id*
-
-valueint*
-5*.
-5) )("
-) )(
-implicit return:
-valueintB 
-SpaceProject.src.WeatherDataX
+%SpaceProject.src.CityWeather.Name.set7
+-/home/alex/c#/SpaceProject/src/CityWeather.cs$ ('"0*è
+0( ((Ø
+¨
+7
+-/home/alex/c#/SpaceProject/src/CityWeather.cs$ ('C
+SpaceProject.src.CityWeather"!
+NameSpaceProject.src.CityName"__id*&$
+"
+valueSpaceProject.src.CityName"N
+7
+-/home/alex/c#/SpaceProject/src/CityWeather.cs$ ('
+implicit return:$"
+valueSpaceProject.src.CityNameB 
+SpaceProject.src.CityWeatherX

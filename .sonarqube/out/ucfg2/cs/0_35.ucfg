@@ -1,16 +1,73 @@
 
-%SpaceProject.src.CityWeather.Name.set7
--/home/alex/c#/SpaceProject/src/CityWeather.cs$ ('"0*è
-0( ((Ø
-¨
-7
--/home/alex/c#/SpaceProject/src/CityWeather.cs$ ('C
-SpaceProject.src.CityWeather"!
-NameSpaceProject.src.CityName"__id*&$
-"
-valueSpaceProject.src.CityName"N
-7
--/home/alex/c#/SpaceProject/src/CityWeather.cs$ ('
-implicit return:$"
-valueSpaceProject.src.CityNameB 
-SpaceProject.src.CityWeatherX
+1SpaceProject.src.WeatherData.HumidityCriteria.set9
+-/home/alex/c#/SpaceProject/src/WeatherData.csà à("0*
+0
+à à(*
+1*
+1
+ä ä(*
+2
+3*
+2
+ä! ä(,*
+3
+4*ï
+3
+ã å(Ss
+q
+
+å0 å(R
+%0string"__concat**
+
+å2 å(J
+humidity criteria in %: *
+
+åJ å(Q
+
+valuedoublem
+k
+
+ã0 å(R
+%1string"__concat*'
+
+ã0 ã(G
+Invalid argument for *
+
+å0 å(R
+
+%0stringHF
+
+ã å(S
+%2System.ArgumentException"System.ArgumentException≤
+Ø
+
+ã å(S
+%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*.
+
+ã å(S 
+
+%2System.ArgumentException*
+
+ã0 å(R
+
+%1string"!
+
+é é(
+implicit return*~
+4
+ç ç(*h
+f
+
+ç ç()=
+SpaceProject.src.WeatherData"
+_humidityCriteriadouble"__id*
+
+valuedouble*
+5*2
+5
+é é("!
+
+é é(
+implicit return:
+valuedoubleB "
+SpaceProject.src.WeatherDataX
