@@ -1,7 +1,0 @@
-"Day",1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-"temperature",29,30,29,31,31,30,31,29,27,29,31,31,27,31,31
-"Wind",7,8,11,8,5,6,11,15,13,10,12,6,15,4,8
-"Humidity",36,33,22,33,38,55,38,53,60,49,26,49,60,39,53
-"Precipitation",30,27,29,31,20,1,9,22,26,14,12,32,18,9,6
-"Lighting",0,1,0,1,1,0,0,1,0,0,1,0,0,1,0
-"Clouds","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus","Nimbus"
