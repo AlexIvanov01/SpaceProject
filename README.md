@@ -1,12 +1,13 @@
 # Space Project
 
 ## Description
-This C# application chooses the best location and day for launch given weather data and criteria for launch.
+This C# application chooses the best location and day for launch given weather data and criteria for launch and sends the results to mail via outlook.
 
 ## Features
 - Read weather data csv file for each city from a folder.
 - Perform analysis on weather data for each city and chooses best location and day for launch.
 - Display results, including input weather data for each city, most suitable day for launch for each city, most suiatble location.
+- Sends results to e-mail via outlook.
 
 ## Installation Instructions
 1. Clone this repository to your local machine.
