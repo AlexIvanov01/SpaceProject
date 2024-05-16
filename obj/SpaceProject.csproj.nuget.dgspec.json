@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/alex/c#/SpaceProject/SpaceProject.csproj": {}
+    "C:\\Програмиране\\C#\\SpaceProject\\SpaceProject\\SpaceProject.csproj": {}
   },
   "projects": {
-    "/home/alex/c#/SpaceProject/SpaceProject.csproj": {
+    "C:\\Програмиране\\C#\\SpaceProject\\SpaceProject\\SpaceProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alex/c#/SpaceProject/SpaceProject.csproj",
+        "projectUniqueName": "C:\\Програмиране\\C#\\SpaceProject\\SpaceProject\\SpaceProject.csproj",
         "projectName": "SpaceProject",
-        "projectPath": "/home/alex/c#/SpaceProject/SpaceProject.csproj",
-        "packagesPath": "/home/alex/.nuget/packages/",
-        "outputPath": "/home/alex/c#/SpaceProject/obj/",
+        "projectPath": "C:\\Програмиране\\C#\\SpaceProject\\SpaceProject\\SpaceProject.csproj",
+        "packagesPath": "C:\\Users\\Legion5 PRO\\.nuget\\packages\\",
+        "outputPath": "C:\\Програмиране\\C#\\SpaceProject\\SpaceProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alex/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Legion5 PRO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -59,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

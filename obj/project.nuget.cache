@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BhQ15L9+XTVTQZGJ6iRW4Aoz7tkVIxv9/E99+sJJFaL0GVpxbtd+M3GN2TFAYYgCVALWt2SsHPeo+D9peTn8+w==",
+  "dgSpecHash": "W0ZD414pIV71ngZervng4Kyv4Ru07ujCQ7NdPvfjutX4L7w/ahS7KZwQ2o/+H82sU1LHzlPdhj6skW3+EIwyHw==",
   "success": true,
-  "projectFilePath": "/home/alex/c#/SpaceProject/SpaceProject.csproj",
+  "projectFilePath": "C:\\Програмиране\\C#\\SpaceProject\\SpaceProject\\SpaceProject.csproj",
   "expectedPackageFiles": [
-    "/home/alex/.nuget/packages/consoletables/2.6.1/consoletables.2.6.1.nupkg.sha512"
+    "C:\\Users\\Legion5 PRO\\.nuget\\packages\\consoletables\\2.6.1\\consoletables.2.6.1.nupkg.sha512"
   ],
   "logs": []
 }
