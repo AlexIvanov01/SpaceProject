@@ -1,73 +1,0 @@
-
-6SpaceProject.src.WeatherData.PrecipitationCriteria.set9
--/home/alex/c#/SpaceProject/src/WeatherData.cs“ “("0*
-0
-“ “(*
-1*
-1
-• •(*
-2
-3*
-2
-•! •(,*
-3
-4*‘
-3
-– —(Oo
-m
-
-—0 —(N
-%0string"__concat*&
-
-—2 —(F
-precipitation in %: *
-
-—F —(M
-
-valuedoublem
-k
-
-–0 —(N
-%1string"__concat*'
-
-–0 –(G
-Invalid argument for *
-
-—0 —(N
-
-%0stringHF
-
-– —(O
-%2System.ArgumentException"System.ArgumentException²
-¯
-
-– —(O
-%3System.ArgumentException"3System.ArgumentException.ArgumentException(string?)*.
-
-– —(O 
-
-%2System.ArgumentException*
-
-–0 —(N
-
-%1string"!
-
-™ ™(
-implicit return*ƒ
-4
-˜ ˜(/m
-k
-
-˜ ˜(.B
-SpaceProject.src.WeatherData" 
-_precipitationCriteriadouble"__id*
-
-valuedouble*
-5*2
-5
-™ ™("!
-
-™ ™(
-implicit return:
-valuedoubleB "
-SpaceProject.src.WeatherDataX

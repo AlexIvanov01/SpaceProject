@@ -1,9 +1,0 @@
-Þ
-SpaceProject.src.CityWeatherobject­
-FCityWeather(SpaceProject.src.CityName, SpaceProject.src.WeatherData[])cSpaceProject.src.CityWeather.CityWeather(SpaceProject.src.CityName, SpaceProject.src.WeatherData[])7
-PrintData()(SpaceProject.src.CityWeather.PrintData()a
- FindBestDayForLaunch(out string)=SpaceProject.src.CityWeather.FindBestDayForLaunch(out string)1
-Name.get%SpaceProject.src.CityWeather.Name.get1
-Name.set%SpaceProject.src.CityWeather.Name.setA
-WeatherDatas.get-SpaceProject.src.CityWeather.WeatherDatas.getA
-WeatherDatas.set-SpaceProject.src.CityWeather.WeatherDatas.set

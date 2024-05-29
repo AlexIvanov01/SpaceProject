@@ -1,167 +1,0 @@
-
-'SpaceProject.src.WeatherData.ToString()9
--/home/alex/c#/SpaceProject/src/WeatherData.csœ œ('"0*
-0
-œ œ(*
-1*ø
-1
-ž  (7o
-m
-
-ž ž(	
-%0int"$SpaceProject.src.WeatherData.Day.get*.
-
-ž ž( 
-SpaceProject.src.WeatherDataz
-x
-
-ž/ ž(:
-%1double",SpaceProject.src.WeatherData.Temperature.get*.
-
-ž/ ž(: 
-SpaceProject.src.WeatherDatas
-q
-
-žM ž(Q
-%2double"%SpaceProject.src.WeatherData.Wind.get*.
-
-žM ž(Q 
-SpaceProject.src.WeatherDataù
-ö
-
-ž ž(Y
-%3string"__concat*
-
-ž ž(
-Day *
-
-ž ž(
-	
-%0int*"
-
-ž ž(.
-: Temperature - *
-
-ž. ž(;
-
-%1double*#
-
-ž; ž(L
- degrees, Wind - *
-
-žL ž(R
-
-%2double*
-
-žR ž(X
-
- m/s, w
-u
-
-Ÿ Ÿ("
-%4double")SpaceProject.src.WeatherData.Humidity.get*.
-
-Ÿ Ÿ(" 
-SpaceProject.src.WeatherData|
-z
-
-Ÿ7 Ÿ(D
-%5double".SpaceProject.src.WeatherData.Precipitation.get*.
-
-Ÿ7 Ÿ(D 
-SpaceProject.src.WeatherDataÀ
-½
-
-Ÿ Ÿ(I
-%6string"__concat*
-
-Ÿ Ÿ(
-Humidity - *
-
-Ÿ Ÿ(#
-
-%4double*%
-
-Ÿ# Ÿ(6
-%, Precipitation - *
-
-Ÿ6 Ÿ(E
-
-%5double*
-
-ŸE Ÿ(H
-%, b
-`
-
-ž Ÿ(I
-%7string"__concat*
-
-ž ž(Y
-
-%3string*
-
-Ÿ Ÿ(I
-
-%6stringu
-s
-
-   ("
-
-%8bool")SpaceProject.src.WeatherData.Lighting.get*.
-
-   (" 
-SpaceProject.src.WeatherData‹
-ˆ
-
- /  (5!
-%9SpaceProject.src.CloudCover"'SpaceProject.src.WeatherData.Clouds.get*.
-
- /  (5 
-SpaceProject.src.WeatherDataµ
-²
-
-   (7
-%10string"__concat*
-
-   (
-Lighting - *
-
-   (#
-
-
-%8bool*
-
- #  (.
-, Clouds - *1
-
- .  (6#
-!
-%9SpaceProject.src.CloudCoverd
-b
-
-ž  (7
-%11string"__concat*
-
-ž Ÿ(I
-
-%7string*
-
-   (7
-
-%10stringC
-A
-
-ž  (7
-%retstring"__id*
-
-ž  (7
-
-%11string*
-2*/
-2
-¡	 ¡(	"
-
-¡ ¡(	
-
-%retstringB 
-SpaceProject.src.WeatherData
